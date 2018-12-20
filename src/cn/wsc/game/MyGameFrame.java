@@ -16,7 +16,7 @@ public class MyGameFrame extends Frame {
 
 	Image planeImg = GameUtils.getImage("images/plane.png");
 	Image bg = GameUtils.getImage("images/bg.jpg");
-
+     
 	Plane plane = new Plane(planeImg, 251, 251);
 	Shell[] shells = new Shell[50];
 	Explode bao;
