@@ -5,12 +5,14 @@ import java.util.Arrays;
 public class Test1 {
 	public static void main(String[] args) {
 		int[] a = { 8, 2, 6, 3, 9, 0, 4, 1, 5, 7 };
-		int[] b= {1,2,3,4,5,6,7,9,8};
+//		int[] b= {1,2,3,4,5,6,7,9,8};
 		ArraySort(a);
-		ArraySort(b);
+//		ArraySort(b);
+		getMax(a);
+
 	}
 
-	 static void ArraySort(int[] a){
+	static void ArraySort(int[] a) {
 		int temp = 0;
 		boolean flag = true;
 		for (int i = 0; i < a.length - 1; i++) {
@@ -21,14 +23,20 @@ public class Test1 {
 					a[j + 1] = temp;
 					flag = false;
 				}
-				System.out.println("\t\t" + Arrays.toString(a)+""+flag);
 			}
-			if (!flag) {
+			if (flag) {
 				System.out.println("½áÊø!!!!");
 				break;
 			}
-		}
+		}System.out.println(Arrays.toString(a));
+	}
 
-		System.out.println(Arrays.toString(a));
+	static void getMax(int[] a) {
+		for (int j = 1; j >0; j++) {
+			ArraySort(a);
+			for (int i = a.length - 5; i < a.length; i++) {
+				System.out.println(a[i]);
+			}
+		}
 	}
 }
