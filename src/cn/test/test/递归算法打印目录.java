@@ -16,6 +16,7 @@ public class µÝ¹éËã·¨´òÓ¡Ä¿Â¼ {
 			File[] file1=file.listFiles();
 			for (File file2 : file1) {
 				fileList(file2,level+1);
+				System.out.println("s");
 			}
 		}
 	}
